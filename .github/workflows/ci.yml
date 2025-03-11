@@ -19,7 +19,13 @@ jobs:
 
       - name: List files in the directory
         run: ls -la  
-        
+    
+      - name: go to backend
+        run:  cd backend  
+    
+      - name: List files in the again
+        run: ls -la  
+
       - name: Install dependencies
         run: |
           pip install --upgrade pip
