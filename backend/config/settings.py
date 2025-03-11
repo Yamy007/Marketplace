@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     # install package
 
     #my apps
-
+    'apps.marketplace',
     #core
 ]
 
