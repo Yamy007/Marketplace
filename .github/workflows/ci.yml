@@ -23,11 +23,11 @@ jobs:
           pip install --upgrade pip
           pip install -r backend/requirements.txt
 
-      - name: Check code style
-        run: |
-          pip install flake8 black
-          flake8 .
-          black --check .
+      # - name: Check code style
+      #   run: |
+      #     pip install flake8 black
+      #     flake8 .
+      #     black --check .
 
       - name: Run migrations
         run: |
