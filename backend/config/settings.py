@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #my apps
     'apps.user',
+    'apps.marketplace',
     #core
 ]
 
