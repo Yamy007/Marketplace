@@ -1,10 +1,10 @@
 from rest_framework.serializers import ModelSerializer
 from .models import MarketPlaceModel
-
+from apps.user.serializers import UserSerializer
 class MarketPlaceSerializers(ModelSerializer):
+    owner = UserSerializer(read_only=True)
     class Meta:
-        db_table = 'marketplace'
-    model = MarketPlaceModel
-    fields = "__all__"
+        model = MarketPlaceModel
+        fields = ('owner', 'name', 'description', 'slogan', 'image',)
 
-    
+        

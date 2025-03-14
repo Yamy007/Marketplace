@@ -13,7 +13,7 @@ class ProfileSerializer(ModelSerializer):
 
 class UserSerializer(ModelSerializer):
     profile = ProfileSerializer()
-    class Model:
+    class  Meta:
         model = UserModel
         fields = '__all__'
         extra_kwargs = {

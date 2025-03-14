@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import os
 from pathlib import Path
+from .extra_conf.jwt import *
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -39,11 +40,19 @@ INSTALLED_APPS = [
     # install package
 
     #my apps
+    'apps.auth',
     'apps.user',
     'apps.marketplace',
     #core
 ]
+REST_FRAMEWORK = {
 
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+
+  
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

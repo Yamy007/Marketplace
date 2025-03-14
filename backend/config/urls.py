@@ -19,9 +19,9 @@ from django.conf.urls.static import static
 from config.settings import MEDIA_ROOT, MEDIA_URL
 
 urlpatterns = [
-    path('/users', include('apps.user.urls')),
-    path('marketplace/', include('apps.marketplace.urls'))
-
+    path('users/', include('apps.user.urls')),
+    path('marketplace/', include('apps.marketplace.urls')),
+    path('auth/', include('apps.auth.urls'))
 ]
 
 urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)

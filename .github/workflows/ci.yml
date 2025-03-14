@@ -29,6 +29,12 @@ jobs:
       #     flake8 .
       #     black --check .
 
+      - name: start tests
+        run: |
+          python backend/manage.py tests apps.user.tests
+          python backend/manage.py tests apps.marketplace.tests
+
+
       - name: Run migrations
         run: |
           python backend/manage.py migrate
