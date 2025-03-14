@@ -31,8 +31,8 @@ jobs:
 
       - name: start tests
         run: |
-          python backend/manage.py tests apps.user.tests
-          python backend/manage.py tests apps.marketplace.tests
+          python backend/manage.py test apps.user.tests
+          python backend/manage.py test apps.marketplace.tests
 
 
       - name: Run migrations
